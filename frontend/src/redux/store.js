@@ -4,7 +4,17 @@ import thunk from "redux-thunk";
 
 import { composeWithDevTools } from "redux-devtools-extension";
 
-const reducer = combineReducers({});
+import {
+  userCreateReducer,
+  userDeleteReducer,
+  userListReducer,
+} from "../redux/reducers/userReducers";
+
+const reducer = combineReducers({
+  userList: userListReducer,
+  userCreate: userCreateReducer,
+  userDelete: userDeleteReducer,
+});
 
 const initialState = {};
 
